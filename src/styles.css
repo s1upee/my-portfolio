@@ -1,0 +1,236 @@
+/* General Styles */
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column {
+  flex: 1;
+  margin-top: 100px;
+  margin-left: 40px;
+  padding-right: 20px;
+  max-width: 40%;
+}
+
+.right-column {
+  flex: 1;
+}
+
+/* For small screens (less than 800px) */
+@media (max-width: 800px) {
+  .main-content {
+    flex-direction: column; /* Stack the left and right columns vertically */
+    align-items: center; /* Center the content */
+  }
+
+  .left-column {
+    max-width: 100%; /* Make the left column full width */
+    margin-left: 0; /* Remove left margin */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .right-column {
+    max-width: 100%; /* Make the right column full width */
+    margin-top: 20px; /* Add some margin for spacing */
+  }
+}
+
+h1, h2, h3 {
+  color: #702929;
+}
+
+.profile {
+  position: fixed;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.profile p {
+  margin: 5px 0;
+}
+
+.education, .experience {
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #000000; /* Change to your desired hover color */
+}
+
+.language-icons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap to the next line */
+  justify-content: flex-start; /* Align icons to the start */
+  gap: 20px; /* Add space between icons */
+}
+
+.language-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.language-row i {
+  font-size: 30px;
+  color: #333; /* Color for light theme */
+  transition: color 0.3s ease;
+}
+
+.language-row i:hover {
+  color: #000000; /* Hover effect for light theme */
+}
+
+/* Dark theme styles */
+body.dark {
+  color: #fff; /* Set text color to white */
+  background-color: #282828; /* Dark background */
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+  color: #fff; /* White text for all headings */
+}
+
+body.dark .profile p {
+  color: #fff; /* White text for profile paragraphs */
+}
+
+body.dark .social-icons a {
+  color: #fff; /* White icons in dark theme */
+}
+
+body.dark .social-icons a:hover {
+  color: #4d0e21; /* Change hover effect color for dark theme */
+}
+
+body.dark .language-row i {
+  color: #fff; /* White icons in dark theme */
+}
+
+body.dark .language-row i:hover {
+  color: #4d0e21; /* Change hover effect color for dark theme */
+}
+
+body.dark footer p {
+  color: #aaa; /* Lighter gray text for footer */
+}
+
+body.dark footer a {
+  color: inherit; /* Inherit the text color from the body (white) */
+}
+
+body.dark a {
+  color: #fff; /* White links in dark theme */
+}
+
+body.dark a:hover {
+  color: #4d0e21; /* Change hover color for links in dark theme */
+}
+
+body.dark .education p, body.dark .experience p {
+  color: #fff; /* White text */
+}
+
+body.dark .projects {
+  color: #fff; /* White project section title */
+}
+
+body.dark p {
+  color: #fff;
+}
+
+/* Individual project box */
+.project {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(110, 84, 148, 0); /* Start with a fully transparent border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth hover animation */
+  font-family: 'Quicksand', sans-serif; /* Cute, rounded font */
+  cursor: pointer;
+}
+
+/* Hover effect for projects */
+.project:hover {
+  transform: translateY(-1px) scale(1.005); /* Slight scale-up effect */
+  box-shadow: 0 8px 15px rgba(129, 59, 59, 0.1); /* Bigger shadow on hover */
+}
+
+
+
+.project h3 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  color: #652626;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.project p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  font-weight: normal;
+  margin-top: 5px;
+  display: none; /* Hide content by default */
+}
+
+/* Expand/Collapse effect */
+.project.expanded p {
+  display: block; /* Show content when expanded */
+}
+
+/* Style for the Coming Soon title */
+h3 {
+  color: #652626; /* Soft pastel pink */
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  padding-left: 10px;
+}
+
+p {
+  color: #652626;
+}
+
+/* Footer */
+footer {
+  text-align: center; /* Center text horizontally */
+  margin-top: 50px; /* Space above the footer */
+  width: 100%; /* Ensure the footer takes up the full width */
+  padding: 10px 0; /* Add some padding for vertical spacing */
+  color: #fff; /* White text color */
+}
+
+footer a {
+  color: inherit; /* Inherit the text color from the footer */
+  text-decoration: none;
+}
+
+footer p {
+  font-size: 12px;
+  color: #aaa; /* Light gray color for the footer text */
+}

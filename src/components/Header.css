@@ -1,0 +1,25 @@
+/* Style the header */
+
+
+/* Language Toggle container on the left */
+.language-toggle-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Theme Toggle container on the right */
+.theme-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+  .controls {
+    flex-direction: column;
+  }
+}

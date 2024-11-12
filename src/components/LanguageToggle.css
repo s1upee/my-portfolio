@@ -1,0 +1,42 @@
+/* Styling for the language toggle container */
+.language-toggle {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .language-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .language-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .language-button.active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect when the language is active */
+    transform: scale(1.1); /* Slight zoom effect on active button */
+  }
+  
+  /* Styling for the flags */
+  .flag-icon {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .language-button.active .flag-icon {
+    opacity: 1;
+  }
+  
+  /* Optional: Add a slight opacity on non-active buttons for better contrast */
+  .language-button:not(.active) .flag-icon {
+    opacity: 0.6;
+  }
+  

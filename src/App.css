@@ -1,5 +1,32 @@
+/* Apply fonts globally */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@300;500&display=swap');
+
+/* Body Styles */
+body {
+  background-color: #f9f9f9; /* Light pastel background */
+  font-family: 'Poppins', sans-serif; /* Cute, modern font */
+  margin: 0;
+  padding: 0;
+  color: #af7171; /* Default text color */
+}
+
+/* Center content but slightly left-aligned */
 .App {
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+}
+
+/* App Header */
+.App-header {
+  background-color: #6e5494; /* Soft lavender pastel color */
+  padding: 40px 0;
+  text-align: left;
+  width: 100%;
+  border-bottom: 3px solid #fff0f5; /* Light pastel pink border */
 }
 
 .App-logo {
@@ -7,32 +34,123 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  margin: 20px 0;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ffb3b3; /* Soft pastel pink for links */
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Section Titles */
+h2 {
+  font-size: 2.5rem;
+  color: #6e5494; /* Soft lavender pastel */
+  margin-bottom: 30px;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* General Project Card Styles */
+.project {
+  background-color: #fff0f5; /* Light pastel pink */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Quicksand', sans-serif; /* Cute, rounded font */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Description Text for Projects */
+.project p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+/* Responsive design: Adjust for smaller screens */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App {
+    padding: 15px;
+  }
+
+  .project {
+    padding: 15px;
+  }
+
+  .project h3 {
+    font-size: 1.5rem;
+  }
+
+  .project p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
+
+/* Add margin to the bottom of sections */
+section {
+  padding: 30px;
+  margin-top: 20px;
+  position: relative; /* Ensure section stays above emojis */
+  z-index: 1; /* Content should stay above emojis */
+}
+
+/* Specific styling for the "Coming Soon" section */
+h3 {
+  color: #ffb3b3; /* Soft pastel pink */
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  padding-left: 10px;
+}
+
+/* Style for emojis in the background */
+.stickers {
+  position: fixed;  /* Keep emojis in place when scrolling */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Ensure emojis stay behind all content */
+}
+
+.sticker {
+  position: absolute;
+  font-size: 3rem; /* Adjust emoji size */
+  pointer-events: none;
+  opacity: 0.7; /* Slight opacity to ensure they aren't too distracting */
+  transition: transform 0.3s ease; /* Smooth transition for movement */
+}
+
+/* Optional: Adjust emoji opacity and placement */
+.sticker:nth-child(odd) {
+  opacity: 0.8;
+}
+
+.sticker:nth-child(even) {
+  opacity: 0.6;
+}
+

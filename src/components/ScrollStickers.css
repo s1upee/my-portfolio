@@ -1,0 +1,53 @@
+.stickers {
+  position: fixed;  /* Fixed to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;  /* Cover the entire width of the screen */
+  height: 100%;  /* Cover the entire height of the screen */
+  z-index: -1;  /* Stickers appear behind all other content */
+  pointer-events: none;  /* Ensures stickers don't interfere with clicks or interactions */
+}
+
+.sticker {
+  position: absolute;
+  pointer-events: none;  /* Make sure stickers don't block clicks on other elements */
+  opacity: 0.1;  /* Transparent by default */
+  transition: transform 1s ease-in-out;
+  will-change: transform;
+  animation: rotate-sticker 5s infinite linear, move-around 2s infinite alternate;
+  transform: scale(0.4);  /* Apply scaling to make stickers smaller */
+}
+
+/* Rotation animation */
+@keyframes rotate-sticker {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Movement animation for stickers */
+@keyframes move-around {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(10px) translateY(10px);  /* Move slightly in random direction */
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Adjust opacity and size for different stickers */
+.sticker:nth-child(odd) {
+  opacity: 0.3;
+  font-size: 35px;
+}
+
+.sticker:nth-child(even) {
+  opacity: 0.4;
+  font-size: 25px;
+}
